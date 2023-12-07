@@ -9,7 +9,7 @@
     ],
     "content_scripts": [
         {
-            "matches": ["*://stackoverflow.com/*", "*://risecodes.com/*", "*://developer.mozilla.org/*", "*://angular.io/*"],
+            "matches": ["*://stackoverflow.com/*", "*://developer.mozilla.org/*", "*://risecodes.com/*", "*://github.com/*"],
             "js": ["public/static/bundle/script.js"]
         }
     ],
