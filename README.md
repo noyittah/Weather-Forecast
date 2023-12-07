@@ -8,7 +8,7 @@
 4. Script.js file should be generated in bundle.
 5. Download “Custom JavaScript for Websites 2” extension to your chrome browser(https://chromewebstore.google.com/detail/custom-javascript-for-web/ddbjnfjiigjmcpcpkmhogomapikjbjdk).
 6. Add extension for the project:
-    - Navigate to chrome://extensions/.
+    - Navigate to your "Manage Extensions" chrome://extensions/.
     - click onload unpacked button.
     - choose your directory folder of the project.
     - "Weather-Forecast" extension should creat.
