@@ -22,7 +22,7 @@
 
 * You can inject the script to other sites by adding the website address to "manifest.json" file -> add your site to "matches" array.
 * You can modify the div id that responsible how to inject the script -> constants folder -> "constants.ts" -> modify DIV_ID.
-* Wheather API source: https://www.weatherapi.com/
+* Weather API source: https://www.weatherapi.com/
 
 <img width="1512" alt="Screen Shot 2023-12-07 at 18 45 38" src="https://github.com/noyittah/Weather-Forecast/assets/74644378/65d870ca-a82a-4146-ae2f-3abe9cba7fb7">
 <img width="1511" alt="Screen Shot 2023-12-07 at 18 46 03" src="https://github.com/noyittah/Weather-Forecast/assets/74644378/2636e6aa-0223-49ec-a3fe-52f2a179dd45">
