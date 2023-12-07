@@ -1,4 +1,4 @@
-    import { WEATHER_API_KEY, WEATHER_API_URL, WEEK_DAYS, TEMP_MAP } from './constants/constants';
+    import { WEATHER_API_KEY, WEATHER_API_URL, WEEK_DAYS, TEMP_MAP, DIV_ID } from './constants/constants';
     import '../public/static/styles.css';
 
     const apiKey = WEATHER_API_KEY;
@@ -15,7 +15,7 @@
         icon: '',
     };
 
-    const divId = document.getElementById("nav-footer");
+    const divId = document.getElementById(DIV_ID);
 
     if (divId !== null) {
         divId.replaceWith(creatWeatherContainer());
