@@ -1,7 +1,6 @@
     import { WEATHER_API_KEY, WEATHER_API_URL, WEEK_DAYS, TEMP_MAP } from './constants/constants';
     import '../public/static/styles.css';
 
-
     const apiKey = WEATHER_API_KEY;
     const baseUrl = WEATHER_API_URL;
     const days = WEEK_DAYS
@@ -18,7 +17,7 @@
 
     const divId = document.getElementById("nav-footer");
 
-    if (divId != null) {
+    if (divId !== null) {
         divId.replaceWith(creatWeatherContainer());
     } else {
         const weatherContainer = creatWeatherContainer()
@@ -29,6 +28,8 @@
 
     const searchInput = document.getElementById('searchInput') as HTMLInputElement;
 
+
+    //function debounce - to get the full input (waiting that the user will stop typing).
     function debounce(func: Function, delay: number): Function {
         let timeoutId: any;
 
@@ -45,17 +46,14 @@
 
     function onSearch(): void {
         searchInputValue = searchInput.value.toLowerCase();
-        console.log('User entered:', searchInputValue);
         checkIfUserInsertLocation();
     }
 
     const debouncedSearch = debounce(onSearch, 300);
-
     searchInput.addEventListener('input', debouncedSearch as EventListener);
 
     function getWeatherData(): void {
         const location = searchInputValue;
-        console.log("location",location);
         const apiUrl = `${baseUrl}?q=${location}&key=${apiKey}&days=14`;
 
             fetch(apiUrl)
@@ -108,10 +106,10 @@
                 });
     }
 
+    //function that create weatherInfo by TEMP_MAP (main purpose: to display the most relevant icon and text for each day avarage).
     function getWeatherDataForTemperature(temp: number): { icon: string; text: string } {
         const tempInfo = TEMP_MAP.find((entry) => temp >= entry.range.min && temp <= entry.range.max);    
         const weatherInfo = tempInfo ? tempInfo.info : { icon: 'question-mark', text: 'Unknown' };
-    
         return weatherInfo;
     }
     
@@ -132,6 +130,7 @@
         return weatherContainer;
     }
 
+    //function that check if user insert location to search, if no - diaplay the weather in user current location.
     function checkIfUserInsertLocation(): void {
         if (!searchInputValue) {
             titleElement.innerHTML = `Loading weather data in your location...`;

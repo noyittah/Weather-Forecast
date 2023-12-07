@@ -1,5 +1,5 @@
 export const WEATHER_API_KEY = '8af0858deb18454d8fa105418230512';
-export const WEATHER_API_URL = 'https://cors-anywhere.herokuapp.com/https://api.weatherapi.com/v1/forecast.json';
+export const WEATHER_API_URL = 'https://api.weatherapi.com/v1/forecast.json';
 export const WEEK_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 const ICON_URL = '//cdn.weatherapi.com/weather/64x64/day/';
 
