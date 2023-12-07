@@ -1,0 +1,20 @@
+{
+    "name": "Weather-Forecast",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "description": "-",
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://stackoverflow.com/*", "*://risecodes.com/*", "*://developer.mozilla.org/*", "*://angular.io/*"],
+            "js": ["public/static/bundle/script.js"]
+        }
+    ],
+    "host_permissions": ["<all_urls>"],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}

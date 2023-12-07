@@ -1,0 +1,77 @@
+.weather-container {
+    background: linear-gradient(to bottom, rgba(0, 0, 128, 0.9), rgba(0, 0, 128, 0.6), rgba(0, 0, 128, 0.3), rgba(0, 0, 128, 0.3), rgba(0, 0, 128, 0.3), rgba(0, 0, 128, 0.6), rgba(0, 0, 128, 0.9));
+    color: #484848;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 30%;
+}
+
+.header {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #searchInput {
+        border-radius: 10px;
+        width: 30%;
+    }
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 50px;
+}
+
+.card {
+    height: 200px;
+    max-height: inherit;
+    width: calc(14.2857% - 30px);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    opacity: 1;
+
+    .card-body {
+        background-color: lightgray;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        border-radius: 10px;
+
+        .card-header {
+            background-color: gray !important;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 1px solid #484848;
+            padding: 8px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .text {
+                font-size: 14px;
+        }
+    }
+
+    .card-footer {
+        background-color: gray !important;
+        font-size: 16px;
+        font-weight: bold;
+        border-top: 1px solid #484848;
+        padding: 8px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
